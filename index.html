@@ -1,15 +1,20 @@
- <!DOCTYPE html>
-<html>
-  <head>
-    
-    <style>
-      *{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style media="screen">
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
-
 body{
 display: flex;
 align-items: center;
@@ -17,19 +22,20 @@ justify-content: center;
 min-height: 100vh;
 background-color: #080710;
 }
+ 
 .background{
     width: 430px;
     height: 520px;
-    left: 50%;
-    top: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
 }
 .background .shape{
-    position: absolute;
-    border-radius: 50%;
     height: 200px;
     width: 200px;
+    position: absolute;
+    border-radius: 50%;
 }
 .shape:first-child{
     background: linear-gradient(
@@ -48,6 +54,7 @@ background-color: #080710;
     right: -30px;
     bottom: -80px;
 }
+ 
 .wrapper,
 .wrapper .img-area,
 .social-icons a,
@@ -61,21 +68,22 @@ box-shadow: 0 0 40px rgba(8,7,16,0.6);
 
 .wrapper{
 position: relative;
+width: 350px;
+padding: 30px;
+border-radius: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-width: 350px;
-padding: 30px;
-border-radius: 10px;
-}
-.wrapper .img-area{
-display: flex;
-align-items: center;
-justify-content: center;                    
+}                                      
+
+.wrapper .img-area{                    
 height: 150px;
 width: 150px;
 border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .img-area .inner-area{
 height: calc(100% - 25px);
@@ -88,12 +96,11 @@ width: 100%;
 border-radius: 50%;
 object-fit: cover;
 }
-
-.wrapper .name{  
-color: white;
-margin: 10px 0 5px 0;                      
+.wrapper .name{                        
 font-size: 23px;
 font-weight: 500;
+color: white;
+margin: 10px 0 5px 0;
 }
 .wrapper .about{
 color: #d0d1d7;
@@ -105,35 +112,43 @@ margin: 15px 0 25px 0;
 }
 .social-icons a{
 position: relative;
-display: inline-flex;
-text-decoration: none;
-border-radius: 50%;
 height: 40px;
 width: 40px;
 margin: 0 5px;
+display: inline-flex;
+text-decoration: none;
+border-radius: 50%;
 }                                      
 .social-icons a:hover::before,
 .wrapper .icon:hover::before,
 .buttons button:hover:before{
 content: "";
 position: absolute;
-border-radius: 50%;
-background: #ecf0f3;
 top: 0;
 left: 0;
 bottom: 0;
 right: 0;
+border-radius: 50%;
+background: #ecf0f3;
 box-shadow: inset -3px -3px 7px #ffffff,
           inset 3px 3px 5px #ceced1;
 }
+.buttons button:hover:before{
+z-index: -1;
+border-radius: 5px;
+}
+
+.buttons button:hover{
+  color: black;
+}                                      
 .social-icons a i{
+position: relative;
+z-index: 3;
+text-align: center;
 width: 100%;
 height: 100%;
 font-size: 20px;
 line-height: 35px;
-position: relative;
-z-index: 3;
-text-align: center;
 }
 .social-icons a:nth-last-child(1) i{
 color: #13d151;
@@ -154,13 +169,13 @@ width: 100%;
 justify-content: space-between;
 }
 .buttons button{
-outline: none;
-padding: 12px 0;
-color: #d0d1d6;
-font-size: 17px;
 position: relative;
 width: 100%;
 border: none;
+outline: none;
+padding: 12px 0;
+color: #d0d1d6;                                                              
+font-size: 17px;
 font-weight: 400;
 border-radius: 5px;
 cursor: pointer;
@@ -172,58 +187,39 @@ margin-right: 10px;
 .buttons button:last-child{
 margin-left: 10px;
 }
-.buttons button:hover:before{
-z-index: -1;
-border-radius: 5px;
-}
 
-.buttons button:hover{
-  color: black;
-}
-
-    </style>
-    
-    
-    
-  </head>
-  
+  </style>
+</head>
 <body>
-
-<!-- For the element of the background -->
-<div class="background">
-   <div class="shape"></div>
-   <div class="shape"></div>
-</div>
-
-<!-- Basic structure of profile card -->
-<div class="wrapper">
- <!-- Profile image area -->
- <div class="img-area">
-   <div class="inner-area">
-      <img src="https://user-images.githubusercontent.com/121257754/209231977-b2b21087-9e60-4e7f-9195-bf11d1ac881a.png" alt="">
-   </div>
- </div>
-<!-- Basic information -->
-  <div class="name">Monalisha Roy</div>
-  <div class="about">
-     I am a Profasonal Web Designer
+  <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
   </div>
-<!-- social icon -->
- <div class="social-icons">
-    <a href="#" class="gl"><i class="fab fa-youtube"></i></a>
-    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-    <a href="#" class="insta"><i class="fab fa-google"></i></a> 
-    <a href="#" class="yt"><i class="fab fa fa-whatsapp"></i></a>
-
- </div>
-<!-- 2 buttons -->
- <div class="buttons">
-   <button>Message</button>
-   <button>Subscribe</button>
- </div>
-
-</div>
 
 
+   <div class="wrapper">
+     <div class="img-area">
+       <div class="inner-area">
+         <img src="https://user-images.githubusercontent.com/121257754/209231977-b2b21087-9e60-4e7f-9195-bf11d1ac881a.png" alt="">
+       </div>
+     </div>
+
+     <div class="name">Mustafa AKALIN</div>
+     <div class="about">
+       Jr. Cyber Security Engineer & Jr. Software Engineer
+  </div>
+     <div class="social-icons">
+       <a href="#" class="gl"><i class="fab fa-youtube"></i></a>
+       <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+       <a href="#" class="insta"><i class="fab fa-google"></i></a> 
+       <a href="#" class="yt"><i class="fab fa fa-whatsapp"></i></a>
+
+     </div>
+     <div class="buttons">
+       <button>Message</button>
+       <button>Subscribe</button>
+     </div>
+
+   </div>
 </body>
-</html> 
+</html>
